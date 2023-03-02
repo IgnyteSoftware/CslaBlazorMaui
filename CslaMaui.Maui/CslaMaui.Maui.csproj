@@ -60,4 +60,8 @@
       <ProjectReference Include="..\CslaMaui.Blazor.Shared\CslaMaui.Blazor.Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages\" />
+    </ItemGroup>
+
 </Project>

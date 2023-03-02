@@ -1,5 +1,19 @@
 ﻿@page "/home"
 
+@inject Csla.ApplicationContext _appContext
+
 <PageTitle>Home</PageTitle>
 
-<HomeComponent></HomeComponent>
+<AuthorizeView>
+    <Authorized>
+        <h3>Welcome @context?.User?.Identity?.Name</h3>
+
+        <p>@context?.User?.Identity?.IsAuthenticated</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>You're not logged in.</p>
+    </NotAuthorized>
+</AuthorizeView>
+@code {
+}
+
