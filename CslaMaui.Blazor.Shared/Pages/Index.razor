@@ -16,10 +16,7 @@
     <h1>Csla Blazor Maui Sample App</h1>
     @if (vmCredentials.Model != null)
     {
-        <div>Valid: @vmCredentials.Model.IsValid</div>
         <EditForm Model="vmCredentials.Model" OnValidSubmit="@HandleSubmitAsync">
-            <DataAnnotationsValidator/>
-            <ValidationSummary />
             <div class="form-floating mb-3">
                 <InputText type="text" class="form-control" id="username" placeholder="Username" @bind-Value="vmCredentials.Model.Username" />
                 <label for="username">Username</label>
